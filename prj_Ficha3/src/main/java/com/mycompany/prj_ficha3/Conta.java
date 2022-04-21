@@ -127,4 +127,37 @@ public class Conta {
         Conta c1 = (Conta) c;
         return this.saldo == c1.saldo && this.codConta == c1.codConta && this.titular1.equals(c1.titular1) && this.titular2.equals(c1.titular2) && this.dataAbertura.equals(c1.dataAbertura) && this.dataUltMov.equals(c1.dataUltMov) && this.qtdMov == c1.qtdMov;
     }
+    
+    //Método Levantamento
+    public void levantamento(double valor, Data data){
+        this.saldo -= valor;
+    } 
+    
+    //Método Levantamento
+    public void deposito(double valor, Data data){
+        this.saldo += valor;
+        this.dataUltMov = data;
+    }
+    
+    //Método Dias sem Movimentos
+    public int dias_ult_mov(Data data_hoje){
+        return this.dataUltMov.calcularDiferenca(data_hoje);
+    }
+    
+    //Método Dias da conta
+    public int dias_conta(Data data_hoje){
+        return this.dataAbertura.calcularDiferenca(data_hoje);
+    }
+    
+    //Método Dias da conta
+    public boolean dias_conta(Data data_hoje, int x){
+        if (this.dataAbertura.calcularDiferenca(data_hoje)>x) {
+            return true;
+        }else{
+            return false;
+        }
+    }
+    
+    
+    
 }

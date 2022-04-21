@@ -4,6 +4,7 @@
  */
 
 package com.mycompany.prj_ficha3;
+import java.util.ArrayList;
 
 /**
  *
@@ -12,6 +13,10 @@ package com.mycompany.prj_ficha3;
 public class Prj_Ficha3 {
 
     public static void main(String[] args) {
+        ArrayList<Conta> vet = new ArrayList<Conta>();
+        Cliente c1 = new Cliente("Dinis");
+        vet.add(12118,84.4,4,c1);
+        
         
     }
 }
