@@ -48,13 +48,13 @@ public class Prj_Ficha3 {
         Data data_atual = new Data(2022,4,27);
         
         for (int i = 0; i < vec.size(); i++) {
-            idade_m = vec.get(i).getTitular1().getDataNasc().calcularDiferenca(data_atual);
-            //idade_m = (vec.get(i).getTitular1().getDataNasc().calcularDiferenca(data_atual)+vec.get(i).getTitular2().getDataNasc().calcularDiferenca(data_atual))/2;
+            //idade_m = vec.get(i).getTitular1().getDataNasc().calcularDiferenca(data_atual);
+            idade_m = ((vec.get(i).getTitular1().getDataNasc().calcularDiferenca(data_atual))/12+(vec.get(i).getTitular2().getDataNasc().calcularDiferenca(data_atual))/12)/2;
             System.out.println(idade_m);
-            /*if (idade_m < 50) {
+            if (idade_m < 50) {
                 System.out.println(vec.get(i).toString());
                 System.out.println("");
-            }*/
+            }
         }
     }
 }
