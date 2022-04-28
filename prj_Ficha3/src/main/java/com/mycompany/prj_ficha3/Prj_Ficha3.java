@@ -17,7 +17,7 @@ public class Prj_Ficha3 {
         Data L1 = new Data(2003,3,2);
         Data data_nasc_1 = new Data(2003,3,2);
         Data data_nasc_2 = new Data(1970,12,15);
-        Data data_nasc_3 = new Data(1950,4,27);
+        Data data_nasc_3 = new Data(1900,4,27);
         Data data_nasc_4 = new Data(2003,10,8);
         ArrayList<Conta> vet = new ArrayList<Conta>();
         Cliente c1 = new Cliente("Dinis","4410-389","1112345","dinisfgranja@hotmail.com",data_nasc_1);  
@@ -48,8 +48,7 @@ public class Prj_Ficha3 {
         Data data_atual = new Data(2022,4,27);
         
         for (int i = 0; i < vec.size(); i++) {
-            //idade_m = vec.get(i).getTitular1().getDataNasc().calcularDiferenca(data_atual);
-            idade_m = ((vec.get(i).getTitular1().getDataNasc().calcularDiferenca(data_atual))/12+(vec.get(i).getTitular2().getDataNasc().calcularDiferenca(data_atual))/12)/2;
+            idade_m = ((vec.get(i).getTitular1().getDataNasc().calcularDiferenca(data_atual))/365+(vec.get(i).getTitular2().getDataNasc().calcularDiferenca(data_atual))/365)/2;
             System.out.println(idade_m);
             if (idade_m < 50) {
                 System.out.println(vec.get(i).toString());
